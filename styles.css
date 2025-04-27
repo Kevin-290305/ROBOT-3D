@@ -14,6 +14,7 @@ body{
     
 }
 
+
 .image-gradient {
     position: absolute;
     top: 0;
@@ -71,10 +72,23 @@ nav a {
     text-decoration: none;
     color: inherit ;
     z-index: 999;
+    position: relative;
 }
 
-nav a:hover {
-    color: #e7e7e7;
+nav a::after{
+	content: " ";
+	height: 2px;
+	width: 0%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(90deg, #7f42a7,#aa94b5 );
+	transition: width 0.5s ease;
+}
+
+
+nav a:hover:after{
+	width: 100%;
 }
 
 .btn-signing {
